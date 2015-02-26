@@ -1,10 +1,10 @@
 package MainPackage;
 
-public class CopyOfMyInteger {
+public class MyInteger {
 
     int value;
     
-    CopyOfMyInteger(int newValue) { 			//constructor
+    MyInteger(int newValue) { 			//constructor
         value = newValue;
     }
 
@@ -29,15 +29,15 @@ public class CopyOfMyInteger {
         return true;
     }
 
-    public static boolean isEven(CopyOfMyInteger n) {
+    public static boolean isEven(MyInteger n) {
         return n.isEven();
     }
 
-    public static boolean isOdd(CopyOfMyInteger n) {
+    public static boolean isOdd(MyInteger n) {
         return n.isOdd();
     }
 
-    public static boolean isPrime(CopyOfMyInteger n) {
+    public static boolean isPrime(MyInteger n) {
         return n.isPrime();
     }
 
@@ -57,7 +57,7 @@ public class CopyOfMyInteger {
         return (value == n);
     }
 
-    public boolean equals(CopyOfMyInteger n) {
+    public boolean equals(MyInteger n) {
         return equals(n.getValue());
     }
 
@@ -69,23 +69,22 @@ public class CopyOfMyInteger {
         return parseInt(new String(s));
     }
         
-
-    //test
+//test
      public static void main(String[] args) {
-            CopyOfMyInteger n1 = new CopyOfMyInteger(10);
+            MyInteger n1 = new MyInteger(10);
             System.out.println("n1 is even? " + n1.isEven());
             System.out.println("n1 is prime? " + n1.isPrime());
-            System.out.println("20 is prime? " + CopyOfMyInteger.isPrime(20));
+            System.out.println("20 is prime? " + MyInteger.isPrime(20));
 
             char[] chars = {'1', '9', '9', '3'};
-            System.out.println(CopyOfMyInteger.parseInt(chars));
+            System.out.println(MyInteger.parseInt(chars));
 
             String s = "1993";
-            System.out.println(CopyOfMyInteger.parseInt(s));
+            System.out.println(MyInteger.parseInt(s));
 
-            CopyOfMyInteger n2 = new CopyOfMyInteger(20);
+            MyInteger n2 = new MyInteger(20);
             System.out.println("n2 is odd? " + n2.isOdd());
-            System.out.println("10 is odd? " + CopyOfMyInteger.isOdd(66));
+            System.out.println("10 is odd? " + MyInteger.isOdd(66));
             System.out.println("n1 is equal to n2? " + n1.equals(n2));
             System.out.println("n1 is equal to 15? " + n1.equals(5));
         
